@@ -2,5 +2,5 @@
 
 ## 安装
 
-`box-sizing: border-box`
+需要: `box-sizing: border-box`
 
