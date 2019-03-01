@@ -43,13 +43,13 @@
 <body>
 
 <div id="app">
-    <b-button>
+    <b-button :loading="loading1" @click="loading1=!loading1">
         自行车
     </b-button>
-    <b-button icon="settings">
+    <b-button icon="settings" :loading="loading2" @click="loading2=!loading2">
         按钮
     </b-button>
-    <b-button icon="settings" icon-position="right">
+    <b-button icon="settings" icon-position="right" :loading="loading3" @click="loading3=!loading3">
         按钮
     </b-button>
     <b-icon name="download"></b-icon>
