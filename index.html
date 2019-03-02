@@ -1,58 +1,63 @@
 <!doctype html>
 <html lang="zh-Hans">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>bike</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>bike</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        :root {
-            --button-height: 32px;
-            --font-size: 14px;
-            --button-bg: white;
-            --button-active-bg: #eee;
-            --border-radius: 4px;
-            --color: #333;
-            --border-color: #999;
-            --border-color-hover: #666;
+    :root {
+      --button-height: 32px;
+      --font-size: 14px;
+      --button-bg: white;
+      --button-active-bg: #eee;
+      --border-radius: 4px;
+      --color: #333;
+      --border-color: #999;
+      --border-color-hover: red;
 
-        }
+    }
 
-        #app {
-            margin: 20px;
-        }
+    #app {
+      margin: 20px;
+    }
 
-        body {
-            font-size: var(--font-size);
-        }
-    </style>
-    <style>
-        .icon {
-            width: 1em;
-            height: 1em;
-        }
-    </style>
+    body {
+      font-size: var(--font-size);
+    }
+  </style>
+  <style>
+    .icon {
+      width: 1em;
+      height: 1em;
+    }
+  </style>
 </head>
 <body>
 
 <div id="app">
-    <b-button :loading="loading1" @click="loading1=!loading1">
-        自行车
-    </b-button>
-    <b-button icon="settings" :loading="loading2" @click="loading2=!loading2">
-        按钮
-    </b-button>
-    <b-button icon="settings" icon-position="right" :loading="loading3" @click="loading3=!loading3">
-        按钮
-    </b-button>
-    <b-icon name="download"></b-icon>
+  <b-button :loading="loading1" @click="loading1=!loading1">
+    自行车
+  </b-button>
+  <b-button icon="settings" :loading="loading2" @click="loading2=!loading2">
+    按钮
+  </b-button>
+  <b-button icon="settings" icon-position="right" :loading="loading3" @click="loading3=!loading3">
+    按钮
+  </b-button>
+  <!--<b-icon name="download"></b-icon>-->
+  <b-button-group>
+    <b-button icon="left">上一页</b-button>
+    <b-button>更多</b-button>
+    <b-button icon="right" icon-position="right">下一页</b-button>
+  </b-button-group>
 </div>
 <script src="./src/app.js"></script>
 <script src="//at.alicdn.com/t/font_1034725_p8p1ojwnj5n.js"></script>
