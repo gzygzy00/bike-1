@@ -6,11 +6,11 @@
 
 <script>
   export default {
-    mounted(){
+    mounted() {
       console.log(this.$el.children)
-      for(let node of this.$el.children){
+      for (let node of this.$el.children) {
         let name = node.nodeName.toLowerCase()
-        if(name !== 'button'){
+        if (name !== 'button') {
           console.warn(`b-button-group 的子元素应该全是 b-button, 但是你写的是 ${name}`)
         }
       }
@@ -25,7 +25,10 @@
 
     > .b-button {
       border-radius: 0;
-      margin-left: -1px;
+
+      &:not(:first-child) {
+        margin-left: -1px;
+      }
 
       &:first-child {
         border-top-left-radius: var(--border-radius);
